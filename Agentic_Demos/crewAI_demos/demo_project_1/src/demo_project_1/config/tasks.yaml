@@ -1,0 +1,18 @@
+research_task:
+  description: >
+    Conduct thorough research on movies of {current_year} or relevant to {topic}.
+    Include top movies, directors, actors, ratings, box office performance, and trends.
+  expected_output: >
+    A list of 10 bullet points summarizing the most interesting and relevant movie information.
+  agent: movie_researcher
+
+reporting_task:
+  description: >
+    Expand the research into a detailed report. Include sections for:
+    - Top movies and their ratings
+    - Director and actor highlights
+    - Box office performance
+    - Trends and interesting insights
+  expected_output: >
+    A fully detailed markdown report formatted with headings, bullet points, and structured sections.
+  agent: reporting_analyst

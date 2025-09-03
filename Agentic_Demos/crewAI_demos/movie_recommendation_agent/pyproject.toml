@@ -1,0 +1,23 @@
+[project]
+name = "movie_recommendation_agent"
+version = "0.1.0"
+description = "movie_recommendation_agent using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.175.0,<1.0.0"
+]
+
+[project.scripts]
+movie_recommendation_agent = "movie_recommendation_agent.main:run"
+run_crew = "movie_recommendation_agent.main:run"
+train = "movie_recommendation_agent.main:train"
+replay = "movie_recommendation_agent.main:replay"
+test = "movie_recommendation_agent.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

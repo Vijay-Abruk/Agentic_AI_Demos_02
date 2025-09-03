@@ -1,0 +1,50 @@
+# === Agent Frameworks ===
+langchain
+langgraph
+langchain-community
+
+# Google ADK (Agent Development Kit)
+google-adk
+groq
+# Optionally install all extras (includes evaluation, UI, tool integrations)
+# google-adk[all]
+
+# === Google Gemini LLM Support ===
+langchain-google-genai==2.1.8
+google-genai==1.28.0
+langchain-groq
+
+# === Optional—Vertex AI Agent Engine (for deployment) ===
+google-cloud-aiplatform[agent_engines]
+
+# === Embeddings & Other Model Support ===
+openai
+langchain-openai
+InstructorEmbedding
+langchain-huggingface
+tf-keras
+
+# === UI Tools ===
+streamlit
+
+# === Crew AI ===
+crewai
+
+# === Environment Management ===
+python-dotenv
+
+# === Search & Retrieval Tools ===
+duckduckgo-search
+wikipedia
+
+# === Vector Stores ===
+faiss-cpu
+chromadb
+langchain-chroma
+
+# === Vector Stores ===
+llama-index
+llama-index-llms-google-genai
+llama-index-embeddings-google-genai
+llama-index-embeddings-openai
+llama-index-vector-stores-faiss
