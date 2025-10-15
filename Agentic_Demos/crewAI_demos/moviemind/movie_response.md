@@ -1,0 +1,1 @@
+Okay, I will retrieve the plot details for "Maze Runner". I will search for variations and similar titles to ensure the most accurate results. I will only provide information that is available and will not make up any plot details.

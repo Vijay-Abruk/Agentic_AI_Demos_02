@@ -48,3 +48,7 @@ llama-index-llms-google-genai
 llama-index-embeddings-google-genai
 llama-index-embeddings-openai
 llama-index-vector-stores-faiss
+
+# MCP Integration
+crewai-tools[mcp]
+mcp

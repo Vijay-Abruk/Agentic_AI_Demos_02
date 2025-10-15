@@ -4,7 +4,7 @@ import warnings
 
 from datetime import datetime
 
-from movie_recommendation_agent.crew import MovieCrew
+from moviemind.crew import Moviemind
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
@@ -15,20 +15,17 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
 def run():
     """
-    Run the movie crew for a recommendation or plot query.
-    Use one of the following:
-    - Recommend movies: provide 'genre' and 'year'
-    - Get plot: provide 'title'
+    Run the crew.
     """
-    # Example: Recommendation query
+    
     inputs = {
-        "genre": "action",
-        "year": 2025
+        "movie_title": "Maze Runner",
+        "genre": "", 
+        "year": ""  
     }
-
+    
     try:
-        result = MovieCrew().crew().kickoff(inputs=inputs)
-        print("Result:\n", result)
+        Moviemind().crew().kickoff(inputs=inputs)
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 
@@ -42,7 +39,7 @@ def train():
         'current_year': str(datetime.now().year)
     }
     try:
-        MovieCrew().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
+        Moviemind().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
 
     except Exception as e:
         raise Exception(f"An error occurred while training the crew: {e}")
@@ -52,7 +49,7 @@ def replay():
     Replay the crew execution from a specific task.
     """
     try:
-        MovieCrew().crew().replay(task_id=sys.argv[1])
+        Moviemind().crew().replay(task_id=sys.argv[1])
 
     except Exception as e:
         raise Exception(f"An error occurred while replaying the crew: {e}")
@@ -67,7 +64,7 @@ def test():
     }
     
     try:
-        MovieCrew().crew().test(n_iterations=int(sys.argv[1]), eval_llm=sys.argv[2], inputs=inputs)
+        Moviemind().crew().test(n_iterations=int(sys.argv[1]), eval_llm=sys.argv[2], inputs=inputs)
 
     except Exception as e:
         raise Exception(f"An error occurred while testing the crew: {e}")

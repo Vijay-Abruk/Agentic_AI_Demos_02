@@ -1,0 +1,19 @@
+Smart_Movie_Request_Task:
+  description: >
+    Analyze the provided inputs and ONLY perform the appropriate action:
+    
+    INPUTS:
+    - Movie Title: "{movie_title}"
+    - Genre: "{genre}"
+    - Year: "{year}"
+    
+    DECISION RULES (follow exactly):
+    1. IF "{movie_title}" is provided (even if genre/year empty) → Get ONLY plot details for "{movie_title}"
+    2. IF "{genre}" is provided AND "{year}" is provided AND movie_title empty → Get ONLY recommendations  
+    3. IF all three provided → Get BOTH plot details for "{movie_title}" AND recommendations for "{genre}" "{year}"
+    4. IF only genre OR only year provided → Return "Please provide both genre and year for recommendations"
+    
+    For movie titles, search for variations and similar names. Do not make up plot details.
+  expected_output: >
+    Only the information that matches the input criteria.
+  agent: supervisor_agent
